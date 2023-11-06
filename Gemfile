@@ -51,10 +51,16 @@ group :development, :test do
   gem "sqlite3", "~> 1.4"
 end
 
+group :development do
+  gem 'guard'
+end
+
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "minitest-reporters"
+  gem "guard-minitest"
 end
 group :production do
   gem 'pg'
